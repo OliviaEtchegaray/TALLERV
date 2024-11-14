@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+    <!-- Video sin el atributo "controls" para que no aparezcan controles de reproducción -->
+    <video id="miVideo" src="VISUALES TALLER.mp4" autoplay muted loop width="600" height="285"></video>
+
+    <script>
+        const video = document.getElementById('miVideo');
+
+        // Poner el video en pantalla completa al hacer clic
+        video.addEventListener('click', () => {
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.webkitRequestFullscreen) {
+                video.webkitRequestFullscreen();
+            } else if (video.mozRequestFullScreen) {
+                video.mozRequestFullScreen();
+            } else if (video.msRequestFullscreen) {
+                video.msRequestFullscreen();
+            }
+        });
+    </script>
+</body>
+</html>
